@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Drinkify</title>
+    <title>Cocktails</title>
     <link rel="icon" type="image/png" href="./images/favicon/logo.png" />
     <link rel="stylesheet" href="./sass/index.scss" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,21 +19,29 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <!-- <include src="./partials/example.html"></include> -->
-  
 
+  <body>
     <include src="./partials/header.html"></include>
     <include src="./partials/burger-menu.html"></include>
     <main>
-      <include src="./partials/hero.html"></include>
-      <include src="./partials/searching.html"></include>
-      <include src="./partials/paginator-pages.html"></include>
+      <section class="container ingredients">
+        <div>
+          <h2 class="favorite-cocktails-title">Favorite cocktails</h2>
+          <ul class="cocktails-list list"></ul>
+          <div class="empty-search forhiden">
+            <svg class="icon" width="142px" height="122px">
+              <use href="./images/sprite.svg#icon-shaker-mobile"></use>
+            </svg>
+            <p class="description">
+              Sorry, we <span>didn’t find</span> any cocktail for you
+            </p>
+          </div>
+        </div>
+      </section>
       <include src="./partials/cocktails-modal.html"></include>
     </main>
-
     <include src="./partials/footer.html"></include>
     <include src="./partials/ingredient-modal.html"></include>
-    <script src="./index.js" type="module"></script>
+    <script src="./cocktails.js" type="module"></script>
   </body>
 </html>
