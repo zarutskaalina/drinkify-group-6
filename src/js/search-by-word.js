@@ -22,7 +22,7 @@ let cocktails = [];
 const getImages = async data => {
   const listImg = await makeRequest(data);
   if (listImg) {
-    console.log('listImg', listImg.length);
+    // console.log('listImg', listImg.length);
 
     if (listImg.length > 0) {
       searchContainer.classList.remove('isHidden');
@@ -106,12 +106,12 @@ function paginator() {
   if (innerWidthScreen > 1279) {
     paginationLimit = 9;
   }
-  console.log(innerWidthScreen, paginationLimit);
-  console.log('listItems', listItems);
-  console.log('paginationNumbers!!!!!!!!!!!!!');
+  // console.log(innerWidthScreen, paginationLimit);
+  // console.log('listItems', listItems);
+  // console.log('paginationNumbers!!!!!!!!!!!!!');
   //  console.log("paginationNumbers last3", paginationNumbers.lastChild(n-3));
   const pageCount = Math.ceil(listItems.length / paginationLimit);
-  console.log('pageCount', pageCount);
+  // console.log('pageCount', pageCount);
   if (pageCount === 1) {
     pagContainer.style.display = 'none';
     paginationNumbers.innerHTML = '';
@@ -154,7 +154,7 @@ function paginator() {
     const pageNumber = document.createElement('button');
     pageNumber.className = 'pagination-number';
     pageNumber.innerHTML = index;
-    console.log('index', index);
+    // console.log('index', index);
     pageNumber.setAttribute('page-index', index);
     pageNumber.setAttribute('aria-label', 'Page ' + index);
 

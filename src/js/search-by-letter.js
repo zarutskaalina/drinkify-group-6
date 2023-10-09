@@ -93,8 +93,8 @@ export function createAlphabetButtons() {
       evt.preventDefault();
       const selectedLetter = letter;
       paginatedList.innerHTML = '';
-      console.log('paginatedList', paginatedList);
-      console.log(selectedLetter);
+      // console.log('paginatedList', paginatedList);
+      // console.log(selectedLetter);
       // Отправляем запрос для поиска коктейлей по выбранной букве или цифре
       await searchCocktails(selectedLetter);
     });
@@ -146,7 +146,7 @@ export async function searchCocktails(letter) {
     if (cocktails.length !== 0) {
       //   код для отображения карточек с коктейлями
       const markup = cocktails.map(item => createMarkupCocktail(item)).join('');
-      console.log(resultsList);
+      // console.log(resultsList);
       emptySearchElement.style.display = 'none';
       resultsList.insertAdjacentHTML('beforeend', markup);
       // избранное
@@ -163,7 +163,7 @@ export async function searchCocktails(letter) {
       });
 
       paginator();
-      console.log(resultsList);
+      // console.log(resultsList);
     }
   } catch (error) {
     // Обработка ошибок при запросе к API
@@ -199,10 +199,10 @@ function paginator() {
   if (innerWidthScreen > 1279) {
     paginationLimit = 9;
   }
-  console.log(innerWidthScreen, paginationLimit);
-  console.log('listItems', listItems);
+  // console.log(innerWidthScreen, paginationLimit);
+  // console.log('listItems', listItems);
   const pageCount = Math.ceil(listItems.length / paginationLimit);
-  console.log('pageCount', pageCount);
+  // console.log('pageCount', pageCount);
   if (pageCount === 1) {
     pagContainer.style.display = 'none';
     paginationNumbers.innerHTML = '';
@@ -245,7 +245,7 @@ function paginator() {
     const pageNumber = document.createElement('button');
     pageNumber.className = 'pagination-number';
     pageNumber.innerHTML = index;
-    console.log('index', index);
+    // console.log('index', index);
     pageNumber.setAttribute('page-index', index);
     pageNumber.setAttribute('aria-label', 'Page ' + index);
 

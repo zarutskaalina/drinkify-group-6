@@ -5,7 +5,7 @@ const cocktailsContainer = document.querySelector('.cocktails-list');
 const currentLS = 'favoriteCocktails';
 const dataCocktails = JSON.parse(localStorage.getItem(currentLS));
 const dataPlaceholder = document.querySelector(".empty-search");
-console.log(dataCocktails);
+// console.log(dataCocktails);
 
 function createCard({_id, drinkThumb, drink, description}) {
   return `<li class="cocktails-item" id="${_id}">

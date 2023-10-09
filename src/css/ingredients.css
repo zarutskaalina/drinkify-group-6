@@ -48,14 +48,6 @@
     margin-bottom: 14px;
 }
 
-/* .ingredient-description {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 20px;
-} */
 
 .alcohol-level {
     opacity: var(--opacity-50);
@@ -74,9 +66,6 @@
     background-color: var(--accent-color);
 }
 
-/* .icon-trash {
-    pointer-events: none;
-} */
 
 .ingredients-placeholder {
     display: flex;

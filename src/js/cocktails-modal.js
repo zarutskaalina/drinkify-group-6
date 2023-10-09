@@ -14,13 +14,13 @@ import refs from './refs';
 let cocktails = [];
 getCocktails().then(data => {
   cocktails = data;
-  console.log(data);
+  // console.log(data);
 });
 
 const ADD_TO_FAVORITE = 'ADD TO FAVORITE';
 const REMOVE_FROM_FAVORITE = 'REMOVE FROM FAVORITE';
 
-console.log(cocktails);
+// console.log(cocktails);
 
 const modal = {
   backdrop: document.querySelector('.cocktails-modal-backdrop'),
