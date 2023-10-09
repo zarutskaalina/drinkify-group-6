@@ -47,7 +47,8 @@ button:active {
   /* 133.333% */
 }
 
-.cocktails-description {
+.cocktails-description,
+.ingredient-description {
   margin-bottom: 20px;
   overflow: hidden;
   color: var(--primary-color-text);
@@ -63,7 +64,7 @@ button:active {
   width: 296px;
   line-height: 24px;
   -webkit-box-orient: vertical;
-  display: block;
+  display: block;           
   display: -webkit-box;
   overflow: hidden !important;
   text-overflow: ellipsis;
@@ -75,7 +76,8 @@ button:active {
   justify-content: space-between;
 }
 
-.cocktails-button {
+.cocktails-button,
+.learn-more-button {
   width: 232px;
   padding: 13px 70px;
   border-radius: 12px;
@@ -97,9 +99,10 @@ button:active {
   background: var(--accent-color);
 }
 
-.cocktails-button-favorite {
+.cocktails-button-favorite,
+.ingredients-button-remove {
   width: 48px;
-  /* height: 48px; */
+  height: 48px;
   padding: 16px;
   justify-content: center;
   align-items: center;
@@ -109,7 +112,8 @@ button:active {
   line-height: 0;
 }
 
-.cocktails-list .icon {
+.cocktails-list .icon,
+.icon-trash {
   width: 18px;
   height: 18px;
   fill: none;
@@ -135,12 +139,14 @@ button:active {
     margin-bottom: 24px;
   }
 
-  .cocktails-description {
+  .cocktails-description,
+  .ingredient-description {
     margin-bottom: 24px;
     min-height: 72px;
   }
 
-  .cocktails-button {
+  .cocktails-button,
+  .learn-more-button {
     width: 228px;
     padding: 16px 55px;
     color: var(--secondary-color-interface);
@@ -150,11 +156,14 @@ button:active {
     letter-spacing: 0.36px;
   }
 
-  .cocktails-button-favorite {
+  .cocktails-button-favorite,
+  .ingredients-button-remove {
     width: 56px;
+    height: 56px;
   }
 
-  .cocktails-list .icon {
+  .cocktails-list .icon,
+  .icon-trash {
     width: 24px;
     height: 24px;
   }

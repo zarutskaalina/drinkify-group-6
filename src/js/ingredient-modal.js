@@ -62,7 +62,7 @@ export const modalContent = ({
 
 export const handleAddToFavorite = () => {
   const ingredients = localStorage.getItem('ingredients');
-  console.log(JSON.parse(ingredients));
+  // console.log(JSON.parse(ingredients));
   const currentIngredient = JSON.parse(
     localStorage.getItem('currentIngredient')
   );
