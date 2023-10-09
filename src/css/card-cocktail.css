@@ -47,7 +47,8 @@ button:active {
   /* 133.333% */
 }
 
-.cocktails-description {
+.cocktails-description,
+.ingredient-description {
   margin-bottom: 20px;
   overflow: hidden;
   color: var(--primary-color-text);
@@ -63,7 +64,7 @@ button:active {
   width: 296px;
   line-height: 24px;
   -webkit-box-orient: vertical;
-  display: block;
+  display: block;           
   display: -webkit-box;
   overflow: hidden !important;
   text-overflow: ellipsis;
@@ -138,7 +139,8 @@ button:active {
     margin-bottom: 24px;
   }
 
-  .cocktails-description {
+  .cocktails-description,
+  .ingredient-description {
     margin-bottom: 24px;
     min-height: 72px;
   }

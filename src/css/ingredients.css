@@ -36,7 +36,7 @@
     margin-top: 0px;
 }
 
-.alcohol-level, .ingredient-description{
+.alcohol-level{
     font-weight: 400;
     font-size: 14px;
     line-height: 1.29;
@@ -48,14 +48,14 @@
     margin-bottom: 14px;
 }
 
-.ingredient-description {
+/* .ingredient-description {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
     margin: 0px;
     padding: 0px;
     margin-bottom: 20px;
-}
+} */
 
 .alcohol-level {
     opacity: var(--opacity-50);

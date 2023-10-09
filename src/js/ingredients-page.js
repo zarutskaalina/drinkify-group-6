@@ -1,6 +1,11 @@
-// const cocktailsContainer = document.querySelector(".ingredients-cards");
-
+import { getIngredients } from './services';
 import spriteUrl from '/src/images/sprite.svg';
+import refs from './refs';
+import {
+  setFavoriteButtonContent,
+  modalContent as modalIngredientContent,
+  handleAddToFavorite,
+} from './ingredient-modal';
 
 const cocktailsContainer = document.querySelector(".ingredients-cards");
 const dataPlaceholder = document.querySelector(".ingredients-placeholder");
@@ -20,7 +25,7 @@ function renderIngredients() {
       <p class="alcohol-level">${alcohol === "Yes" ? "Alcoholic" : "Non-Alcoholic"}</p>
       <p class="ingredient-description">${description}</p>
       <div class="ingredients-buttons">
-        <button type="button" class="learn-more-button button">learn more</button>
+        <button type="button" class="learn-more-button button" data-id="${_id}">learn more</button>
         <button type="button" class="ingredients-button-remove button">
           <svg class="icon-trash" width="18" height="18">
             <use href="${spriteUrl}#icon-trash-mobile-white"></use>
@@ -55,3 +60,32 @@ function onDeleteCardBtn(event) {
 }
 
 cocktailsContainer.addEventListener('click', onDeleteCardBtn);
+
+document.querySelectorAll('.ingredients-cards').forEach(item => {
+    item.addEventListener('click', e => {
+      if (e.target.nodeName === 'BUTTON') {
+        const ingredientId = e.target.dataset.id;
+        console.log(ingredientId);
+
+        getIngredients(ingredientId).then(res => {
+          const currentIngredient = res[0];
+          const modalContentMarkup = modalIngredientContent(res[0]);
+          refs.ingredientModalContent.insertAdjacentHTML(
+            'beforeend',
+            modalContentMarkup
+          );
+          localStorage.setItem(
+            'currentIngredient',
+            JSON.stringify(currentIngredient)
+          );
+          refs.backdrop.classList.add('isShow');
+          refs.ingredientModal.classList.add('isShow');
+          setFavoriteButtonContent(ingredientId);
+          refs.ingredientModalFavoriteButton.addEventListener(
+            'click',
+            handleAddToFavorite
+          );
+        });
+      }
+    });
+  });
